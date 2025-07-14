@@ -1,0 +1,1059 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A1DCA956-E706-4401-BE8B-03941A2500DA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CRMS</RootNamespace>
+    <AssemblyName>CRMS</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\AdminLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminLogin.Designer.cs">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Calender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Calender.Designer.cs">
+      <DependentUpon>Calender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Login New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Login New.Designer.cs">
+      <DependentUpon>Login New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageAdmin.Designer.cs">
+      <DependentUpon>ManageAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\MDI.Designer.cs">
+      <DependentUpon>MDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connection.cs" />
+    <Compile Include="CRMSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet20.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet22.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet22.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet23.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet23.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet24.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet24.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet25.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet25.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet26.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet26.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet27.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet27.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet28.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet28.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet29.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet29.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet30.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet30.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet31.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet31.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet311.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet311.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet32.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet32.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet33.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet33.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet34.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet34.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet35.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet35.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Car.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Car.Designer.cs">
+      <DependentUpon>Car.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\customer.Designer.cs">
+      <DependentUpon>customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Driver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Driver.Designer.cs">
+      <DependentUpon>Driver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Report2\Booking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report2\Booking.Designer.cs">
+      <DependentUpon>Booking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report2\Cancellation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report2\Cancellation.Designer.cs">
+      <DependentUpon>Cancellation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report2\Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report2\Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report2\Car.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report2\Car.Designer.cs">
+      <DependentUpon>Car.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report2\CustomerInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report2\CustomerInvoice.Designer.cs">
+      <DependentUpon>CustomerInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report2\CustomerPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report2\CustomerPayment.Designer.cs">
+      <DependentUpon>CustomerPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report2\Driver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report2\Driver.Designer.cs">
+      <DependentUpon>Driver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report2\DriverInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report2\DriverInvoice.Designer.cs">
+      <DependentUpon>DriverInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report2\Driverpayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report2\Driverpayment.Designer.cs">
+      <DependentUpon>Driverpayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report2\Returncar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report2\Returncar.Designer.cs">
+      <DependentUpon>Returncar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\BookingReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookingReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CarReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CustomerPaymentReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerPaymentReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CustomerReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\DriverPaymentReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DriverPaymentReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\DriverReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DriverReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\MasterReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\MasterReport.Designer.cs">
+      <DependentUpon>MasterReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TransactionReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\TransactionReport.Designer.cs">
+      <DependentUpon>TransactionReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Booking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Booking.Designer.cs">
+      <DependentUpon>Booking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Cancellation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Cancellation.Designer.cs">
+      <DependentUpon>Cancellation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\CustomerPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\CustomerPayment.Designer.cs">
+      <DependentUpon>CustomerPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\DriverPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\DriverPayment.Designer.cs">
+      <DependentUpon>DriverPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Returncar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Returncar.Designer.cs">
+      <DependentUpon>Returncar.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin\AdminLogin.resx">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Calender.resx">
+      <DependentUpon>Calender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Login New.resx">
+      <DependentUpon>Login New.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\ManageAdmin.resx">
+      <DependentUpon>ManageAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\MDI.resx">
+      <DependentUpon>MDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Car.resx">
+      <DependentUpon>Car.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\customer.resx">
+      <DependentUpon>customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Driver.resx">
+      <DependentUpon>Driver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report2\Booking.rdlc" />
+    <EmbeddedResource Include="Report2\Booking.resx">
+      <DependentUpon>Booking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report2\Cancellation.rdlc" />
+    <EmbeddedResource Include="Report2\Cancellation.resx">
+      <DependentUpon>Cancellation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report2\Customer.rdlc" />
+    <EmbeddedResource Include="Report2\Customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report2\Car.resx">
+      <DependentUpon>Car.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report2\Car.rdlc" />
+    <EmbeddedResource Include="Report2\CustomerInvoice.rdlc" />
+    <EmbeddedResource Include="Report2\CustomerInvoice.resx">
+      <DependentUpon>CustomerInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report2\CustomerPayment.rdlc" />
+    <EmbeddedResource Include="Report2\CustomerPayment.resx">
+      <DependentUpon>CustomerPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report2\Driver.rdlc" />
+    <EmbeddedResource Include="Report2\Driver.resx">
+      <DependentUpon>Driver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report2\DriverInvoice.rdlc" />
+    <EmbeddedResource Include="Report2\DriverInvoice.resx">
+      <DependentUpon>DriverInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report2\Driverpayment.rdlc" />
+    <EmbeddedResource Include="Report2\Driverpayment.resx">
+      <DependentUpon>Driverpayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report2\Returncar.rdlc" />
+    <EmbeddedResource Include="Report2\Returncar.resx">
+      <DependentUpon>Returncar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\BookingReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BookingReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CarReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CarReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CustomerPaymentReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CustomerPaymentReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CustomerReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CustomerReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\DriverPaymentReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DriverPaymentReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\DriverReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DriverReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\MasterReport.resx">
+      <DependentUpon>MasterReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\TransactionReport.resx">
+      <DependentUpon>TransactionReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Booking.resx">
+      <DependentUpon>Booking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Cancellation.resx">
+      <DependentUpon>Cancellation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\CustomerPayment.resx">
+      <DependentUpon>CustomerPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\DriverPayment.resx">
+      <DependentUpon>DriverPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Returncar.resx">
+      <DependentUpon>Returncar.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="CRMSDataSet.xsc">
+      <DependentUpon>CRMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet.xss">
+      <DependentUpon>CRMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet1.xsc">
+      <DependentUpon>CRMSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet1.xss">
+      <DependentUpon>CRMSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet10.xsc">
+      <DependentUpon>CRMSDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet10.xss">
+      <DependentUpon>CRMSDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet11.xsc">
+      <DependentUpon>CRMSDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet11.xss">
+      <DependentUpon>CRMSDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet12.xsc">
+      <DependentUpon>CRMSDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet12.xss">
+      <DependentUpon>CRMSDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet13.xsc">
+      <DependentUpon>CRMSDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet13.xss">
+      <DependentUpon>CRMSDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet14.xsc">
+      <DependentUpon>CRMSDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet14.xss">
+      <DependentUpon>CRMSDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet15.xsc">
+      <DependentUpon>CRMSDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet15.xss">
+      <DependentUpon>CRMSDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet16.xsc">
+      <DependentUpon>CRMSDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet16.xss">
+      <DependentUpon>CRMSDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet17.xsc">
+      <DependentUpon>CRMSDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet17.xss">
+      <DependentUpon>CRMSDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet18.xsc">
+      <DependentUpon>CRMSDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet18.xss">
+      <DependentUpon>CRMSDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet19.xsc">
+      <DependentUpon>CRMSDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet19.xss">
+      <DependentUpon>CRMSDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet2.xsc">
+      <DependentUpon>CRMSDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet2.xss">
+      <DependentUpon>CRMSDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet20.xsc">
+      <DependentUpon>CRMSDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet20.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet20.xss">
+      <DependentUpon>CRMSDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet21.xsc">
+      <DependentUpon>CRMSDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet21.xss">
+      <DependentUpon>CRMSDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet22.xsc">
+      <DependentUpon>CRMSDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet22.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet22.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet22.xss">
+      <DependentUpon>CRMSDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet23.xsc">
+      <DependentUpon>CRMSDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet23.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet23.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet23.xss">
+      <DependentUpon>CRMSDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet24.xsc">
+      <DependentUpon>CRMSDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet24.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet24.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet24.xss">
+      <DependentUpon>CRMSDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet25.xsc">
+      <DependentUpon>CRMSDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet25.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet25.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet25.xss">
+      <DependentUpon>CRMSDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet26.xsc">
+      <DependentUpon>CRMSDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet26.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet26.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet26.xss">
+      <DependentUpon>CRMSDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet27.xsc">
+      <DependentUpon>CRMSDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet27.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet27.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet27.xss">
+      <DependentUpon>CRMSDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet28.xsc">
+      <DependentUpon>CRMSDataSet28.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet28.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet28.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet28.xss">
+      <DependentUpon>CRMSDataSet28.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet29.xsc">
+      <DependentUpon>CRMSDataSet29.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet29.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet29.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet29.xss">
+      <DependentUpon>CRMSDataSet29.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet30.xsc">
+      <DependentUpon>CRMSDataSet30.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet30.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet30.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet30.xss">
+      <DependentUpon>CRMSDataSet30.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet31.xsc">
+      <DependentUpon>CRMSDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet31.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet31.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet31.xss">
+      <DependentUpon>CRMSDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet311.xsc">
+      <DependentUpon>CRMSDataSet311.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet311.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet311.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet311.xss">
+      <DependentUpon>CRMSDataSet311.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet32.xsc">
+      <DependentUpon>CRMSDataSet32.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet32.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet32.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet32.xss">
+      <DependentUpon>CRMSDataSet32.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet33.xsc">
+      <DependentUpon>CRMSDataSet33.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet33.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet33.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet33.xss">
+      <DependentUpon>CRMSDataSet33.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet34.xsc">
+      <DependentUpon>CRMSDataSet34.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet34.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet34.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet34.xss">
+      <DependentUpon>CRMSDataSet34.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet35.xsc">
+      <DependentUpon>CRMSDataSet35.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet35.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet35.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet35.xss">
+      <DependentUpon>CRMSDataSet35.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet4.xsc">
+      <DependentUpon>CRMSDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet4.xss">
+      <DependentUpon>CRMSDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet5.xsc">
+      <DependentUpon>CRMSDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet5.xss">
+      <DependentUpon>CRMSDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet6.xsc">
+      <DependentUpon>CRMSDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet6.xss">
+      <DependentUpon>CRMSDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet7.xsc">
+      <DependentUpon>CRMSDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet7.xss">
+      <DependentUpon>CRMSDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet8.xsc">
+      <DependentUpon>CRMSDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet8.xss">
+      <DependentUpon>CRMSDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet9.xsc">
+      <DependentUpon>CRMSDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet9.xss">
+      <DependentUpon>CRMSDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Image\b1.webp" />
+    <None Include="Image\b5.webp" />
+    <None Include="Image\banner1.webp" />
+    <None Include="Image\C.webp" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CRMS.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CRMS_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>CRMS.mdf</DependentUpon>
+    </Content>
+    <Content Include="Image\44654_car_icon.png" />
+    <Content Include="Image\b1.png" />
+    <Content Include="Image\b2.jpg" />
+    <Content Include="Image\b5.png" />
+    <Content Include="Image\banner1.png" />
+    <Content Include="Image\car.gif" />
+    <Content Include="Image\car2.gif" />
+    <Content Include="Image\car3.jpg" />
+    <Content Include="Image\car5.jpg" />
+    <Content Include="Image\car5.png" />
+    <Content Include="Image\driver.png" />
+    <None Include="Resources\images %282%29.png" />
+    <None Include="Resources\images %283%29.jpeg" />
+    <None Include="Resources\Luxury-Car-Hire-in-Pune.jpg" />
+    <None Include="Resources\images %281%291.jpeg" />
+    <None Include="Resources\images %2812%29.jpeg" />
+    <None Include="Resources\images %281%29.jpeg" />
+    <None Include="Resources\images %282%291.jpeg" />
+    <None Include="Resources\images %282%29.jpeg" />
+    <None Include="Resources\SLS AMG.jpeg" />
+    <None Include="Resources\wp5441213-mercedes-4k-wallpapers.jpg" />
+    <None Include="Resources\Mercedes.jpg" />
+    <None Include="Resources\IMG_20231008_150115.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
