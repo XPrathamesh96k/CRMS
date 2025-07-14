@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CRMSDataSet27" targetNamespace="http://tempuri.org/CRMSDataSet27.xsd" xmlns:mstns="http://tempuri.org/CRMSDataSet27.xsd" xmlns="http://tempuri.org/CRMSDataSet27.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="CRMSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CRMSConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CRMS.Properties.Settings.GlobalReference.Default.CRMSConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ViewTableAdapter" GeneratorDataComponentClassName="ViewTableAdapter" Name="View" UserDataComponentName="ViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CRMSConnectionString (Settings)" DbObjectName="dbo.[View]" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Advanceamount, Totalamount, Customeraddress, Customerdocuments FROM dbo.[View]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Advanceamount" DataSetColumn="Advanceamount" />
+              <Mapping SourceColumn="Totalamount" DataSetColumn="Totalamount" />
+              <Mapping SourceColumn="Customeraddress" DataSetColumn="Customeraddress" />
+              <Mapping SourceColumn="Customerdocuments" DataSetColumn="Customerdocuments" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CRMSDataSet27" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CRMSDataSet27" msprop:Generator_UserDSName="CRMSDataSet27">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View" msprop:Generator_TableClassName="ViewDataTable" msprop:Generator_TableVarName="tableView" msprop:Generator_TablePropName="View" msprop:Generator_RowDeletingName="ViewRowDeleting" msprop:Generator_RowChangingName="ViewRowChanging" msprop:Generator_RowEvHandlerName="ViewRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewRowDeleted" msprop:Generator_UserTableName="View" msprop:Generator_RowChangedName="ViewRowChanged" msprop:Generator_RowEvArgName="ViewRowChangeEvent" msprop:Generator_RowClassName="ViewRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Advanceamount" msprop:Generator_ColumnVarNameInTable="columnAdvanceamount" msprop:Generator_ColumnPropNameInRow="Advanceamount" msprop:Generator_ColumnPropNameInTable="AdvanceamountColumn" msprop:Generator_UserColumnName="Advanceamount" type="xs:double" />
+              <xs:element name="Totalamount" msprop:Generator_ColumnVarNameInTable="columnTotalamount" msprop:Generator_ColumnPropNameInRow="Totalamount" msprop:Generator_ColumnPropNameInTable="TotalamountColumn" msprop:Generator_UserColumnName="Totalamount" type="xs:double" />
+              <xs:element name="Customeraddress" msprop:Generator_ColumnVarNameInTable="columnCustomeraddress" msprop:Generator_ColumnPropNameInRow="Customeraddress" msprop:Generator_ColumnPropNameInTable="CustomeraddressColumn" msprop:Generator_UserColumnName="Customeraddress">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Customerdocuments" msprop:Generator_ColumnVarNameInTable="columnCustomerdocuments" msprop:Generator_ColumnPropNameInRow="Customerdocuments" msprop:Generator_ColumnPropNameInTable="CustomerdocumentsColumn" msprop:Generator_UserColumnName="Customerdocuments">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

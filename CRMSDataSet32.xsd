@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CRMSDataSet32" targetNamespace="http://tempuri.org/CRMSDataSet32.xsd" xmlns:mstns="http://tempuri.org/CRMSDataSet32.xsd" xmlns="http://tempuri.org/CRMSDataSet32.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="CRMSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CRMSConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CRMS.Properties.Settings.GlobalReference.Default.CRMSConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DriverPaymentReceiptViewTableAdapter" GeneratorDataComponentClassName="DriverPaymentReceiptViewTableAdapter" Name="DriverPaymentReceiptView" UserDataComponentName="DriverPaymentReceiptViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CRMSConnectionString (Settings)" DbObjectName="dbo.DriverPaymentReceiptView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Driverid, Totalamount, Totalpayment, Month, Advancepay FROM dbo.DriverPaymentReceiptView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Driverid" DataSetColumn="Driverid" />
+              <Mapping SourceColumn="Totalamount" DataSetColumn="Totalamount" />
+              <Mapping SourceColumn="Totalpayment" DataSetColumn="Totalpayment" />
+              <Mapping SourceColumn="Month" DataSetColumn="Month" />
+              <Mapping SourceColumn="Advancepay" DataSetColumn="Advancepay" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CRMSDataSet32" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CRMSDataSet32" msprop:Generator_UserDSName="CRMSDataSet32">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DriverPaymentReceiptView" msprop:Generator_TableClassName="DriverPaymentReceiptViewDataTable" msprop:Generator_TableVarName="tableDriverPaymentReceiptView" msprop:Generator_TablePropName="DriverPaymentReceiptView" msprop:Generator_RowDeletingName="DriverPaymentReceiptViewRowDeleting" msprop:Generator_RowChangingName="DriverPaymentReceiptViewRowChanging" msprop:Generator_RowEvHandlerName="DriverPaymentReceiptViewRowChangeEventHandler" msprop:Generator_RowDeletedName="DriverPaymentReceiptViewRowDeleted" msprop:Generator_UserTableName="DriverPaymentReceiptView" msprop:Generator_RowChangedName="DriverPaymentReceiptViewRowChanged" msprop:Generator_RowEvArgName="DriverPaymentReceiptViewRowChangeEvent" msprop:Generator_RowClassName="DriverPaymentReceiptViewRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Driverid" msprop:Generator_ColumnVarNameInTable="columnDriverid" msprop:Generator_ColumnPropNameInRow="Driverid" msprop:Generator_ColumnPropNameInTable="DriveridColumn" msprop:Generator_UserColumnName="Driverid" type="xs:int" />
+              <xs:element name="Totalamount" msprop:Generator_ColumnVarNameInTable="columnTotalamount" msprop:Generator_ColumnPropNameInRow="Totalamount" msprop:Generator_ColumnPropNameInTable="TotalamountColumn" msprop:Generator_UserColumnName="Totalamount" type="xs:double" />
+              <xs:element name="Totalpayment" msprop:Generator_ColumnVarNameInTable="columnTotalpayment" msprop:Generator_ColumnPropNameInRow="Totalpayment" msprop:Generator_ColumnPropNameInTable="TotalpaymentColumn" msprop:Generator_UserColumnName="Totalpayment" type="xs:double" />
+              <xs:element name="Month" msprop:Generator_ColumnVarNameInTable="columnMonth" msprop:Generator_ColumnPropNameInRow="Month" msprop:Generator_ColumnPropNameInTable="MonthColumn" msprop:Generator_UserColumnName="Month" type="xs:dateTime" />
+              <xs:element name="Advancepay" msprop:Generator_ColumnVarNameInTable="columnAdvancepay" msprop:Generator_ColumnPropNameInRow="Advancepay" msprop:Generator_ColumnPropNameInTable="AdvancepayColumn" msprop:Generator_UserColumnName="Advancepay" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DriverPaymentReceiptView" />
+      <xs:field xpath="mstns:Driverid" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

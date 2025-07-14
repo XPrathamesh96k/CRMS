@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CRMSDataSet28" targetNamespace="http://tempuri.org/CRMSDataSet28.xsd" xmlns:mstns="http://tempuri.org/CRMSDataSet28.xsd" xmlns="http://tempuri.org/CRMSDataSet28.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="CRMSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CRMSConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CRMS.Properties.Settings.GlobalReference.Default.CRMSConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CustomerPaymentReceiptViewTableAdapter" GeneratorDataComponentClassName="CustomerPaymentReceiptViewTableAdapter" Name="CustomerPaymentReceiptView" UserDataComponentName="CustomerPaymentReceiptViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CRMSConnectionString (Settings)" DbObjectName="dbo.CustomerPaymentReceiptView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Paymentid, Bookingid, Bookingdate, Advancepayment, Paymentdate, Remainingpayment, Totalamount FROM dbo.CustomerPaymentReceiptView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Paymentid" DataSetColumn="Paymentid" />
+              <Mapping SourceColumn="Bookingid" DataSetColumn="Bookingid" />
+              <Mapping SourceColumn="Bookingdate" DataSetColumn="Bookingdate" />
+              <Mapping SourceColumn="Advancepayment" DataSetColumn="Advancepayment" />
+              <Mapping SourceColumn="Paymentdate" DataSetColumn="Paymentdate" />
+              <Mapping SourceColumn="Remainingpayment" DataSetColumn="Remainingpayment" />
+              <Mapping SourceColumn="Totalamount" DataSetColumn="Totalamount" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CRMSDataSet28" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CRMSDataSet28" msprop:Generator_UserDSName="CRMSDataSet28">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CustomerPaymentReceiptView" msprop:Generator_TableClassName="CustomerPaymentReceiptViewDataTable" msprop:Generator_TableVarName="tableCustomerPaymentReceiptView" msprop:Generator_TablePropName="CustomerPaymentReceiptView" msprop:Generator_RowDeletingName="CustomerPaymentReceiptViewRowDeleting" msprop:Generator_RowChangingName="CustomerPaymentReceiptViewRowChanging" msprop:Generator_RowEvHandlerName="CustomerPaymentReceiptViewRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomerPaymentReceiptViewRowDeleted" msprop:Generator_UserTableName="CustomerPaymentReceiptView" msprop:Generator_RowChangedName="CustomerPaymentReceiptViewRowChanged" msprop:Generator_RowEvArgName="CustomerPaymentReceiptViewRowChangeEvent" msprop:Generator_RowClassName="CustomerPaymentReceiptViewRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Paymentid" msprop:Generator_ColumnVarNameInTable="columnPaymentid" msprop:Generator_ColumnPropNameInRow="Paymentid" msprop:Generator_ColumnPropNameInTable="PaymentidColumn" msprop:Generator_UserColumnName="Paymentid" type="xs:int" />
+              <xs:element name="Bookingid" msprop:Generator_ColumnVarNameInTable="columnBookingid" msprop:Generator_ColumnPropNameInRow="Bookingid" msprop:Generator_ColumnPropNameInTable="BookingidColumn" msprop:Generator_UserColumnName="Bookingid" type="xs:int" />
+              <xs:element name="Bookingdate" msprop:Generator_ColumnVarNameInTable="columnBookingdate" msprop:Generator_ColumnPropNameInRow="Bookingdate" msprop:Generator_ColumnPropNameInTable="BookingdateColumn" msprop:Generator_UserColumnName="Bookingdate" type="xs:dateTime" />
+              <xs:element name="Advancepayment" msprop:Generator_ColumnVarNameInTable="columnAdvancepayment" msprop:Generator_ColumnPropNameInRow="Advancepayment" msprop:Generator_ColumnPropNameInTable="AdvancepaymentColumn" msprop:Generator_UserColumnName="Advancepayment" type="xs:int" />
+              <xs:element name="Paymentdate" msprop:Generator_ColumnVarNameInTable="columnPaymentdate" msprop:Generator_ColumnPropNameInRow="Paymentdate" msprop:Generator_ColumnPropNameInTable="PaymentdateColumn" msprop:Generator_UserColumnName="Paymentdate" type="xs:dateTime" />
+              <xs:element name="Remainingpayment" msprop:Generator_ColumnVarNameInTable="columnRemainingpayment" msprop:Generator_ColumnPropNameInRow="Remainingpayment" msprop:Generator_ColumnPropNameInTable="RemainingpaymentColumn" msprop:Generator_UserColumnName="Remainingpayment" type="xs:double" />
+              <xs:element name="Totalamount" msprop:Generator_ColumnVarNameInTable="columnTotalamount" msprop:Generator_ColumnPropNameInRow="Totalamount" msprop:Generator_ColumnPropNameInTable="TotalamountColumn" msprop:Generator_UserColumnName="Totalamount" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CustomerPaymentReceiptView" />
+      <xs:field xpath="mstns:Paymentid" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
